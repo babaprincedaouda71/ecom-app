@@ -23,19 +23,19 @@ public class InventoryServiceApplication {
 		return args -> {
 			List<Product> products = Arrays.asList(
 					Product.builder()
-							.id(UUID.randomUUID().toString())
+							.id("P01")
 							.name("Phone")
 							.price(4800)
 							.quantity(1)
 							.build(),
 					Product.builder()
-							.id(UUID.randomUUID().toString())
+							.id("P02")
 							.name("Computer")
 							.price(5000)
 							.quantity(2)
 							.build(),
 					Product.builder()
-							.id(UUID.randomUUID().toString())
+							.id("P03")
 							.name("Printer")
 							.price(500)
 							.quantity(14)

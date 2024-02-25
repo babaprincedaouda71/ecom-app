@@ -29,6 +29,7 @@ public class ProductController {
     }
 
     @GetMapping("/find/{id}")
+    @PreAuthorize("hasAnyAuthority('USER')")
     public Product getById(@PathVariable String id) {
         return productService.getById(id);
     }

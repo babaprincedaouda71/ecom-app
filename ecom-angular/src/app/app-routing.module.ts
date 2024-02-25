@@ -4,6 +4,7 @@ import {ProductComponent} from "./ui/product/product.component";
 import {CustomerComponent} from "./ui/customer/customer.component";
 import {AuthGuard} from "./guards/auth.guard";
 import {OrderComponent} from "./ui/order/order.component";
+import {OrderDetailsComponent} from "./ui/order-details/order-details.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,14 @@ const routes: Routes = [
   {
     path : "order",
     component : OrderComponent,
+    canActivate : [AuthGuard],
+    data : {
+      roles : ['USER']
+    }
+  },
+  {
+    path : "order-details/:id",
+    component : OrderDetailsComponent,
     canActivate : [AuthGuard],
     data : {
       roles : ['USER']
