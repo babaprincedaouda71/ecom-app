@@ -17,6 +17,6 @@ RUN npm run build
 # Phase 2
 FROM nginx:latest
 
-COPY --from=build /usr/local/app/dist/front-end/browser /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/ecom-angular/browser /usr/share/nginx/html
 
 EXPOSE 80
